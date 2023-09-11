@@ -1,5 +1,8 @@
-import 'package:bookly_app/Screenes/Home.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
+
+import 'Conestanse.dart';
+import 'Features/Presentation/Views/SplashScreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,8 +14,10 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home:  home(),
-    );
+    return  GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: SplashView(),
+      theme: ThemeData.dark().copyWith(scaffoldBackgroundColor: kPrimaryColor,
+      ));
   }
 }
