@@ -15,8 +15,11 @@ class BokkDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-        child: CustomScrollView(slivers: [
-          SliverFillRemaining(hasScrollBody: false,child: Column(
+        child: CustomScrollView(
+      slivers: [
+        SliverFillRemaining(
+          hasScrollBody: false,
+          child: Column(
             children: [
               const CustomeBookDetailsAppBar(),
               Padding(
@@ -36,8 +39,7 @@ class BokkDetails extends StatelessWidget {
               ),
               Text(
                 'Rudyard Kpling',
-                style: Styles.textStyle16
-                    .copyWith(
+                style: Styles.textStyle16.copyWith(
                     color: Colors.white70, fontStyle: FontStyle.italic),
               ),
               const SizedBox(
@@ -61,17 +63,16 @@ class BokkDetails extends StatelessWidget {
                   padding: const EdgeInsets.only(left: 15, top: 10),
                   child: Text(
                     'You can also like',
-                    style: Styles.textStyle14.copyWith(
-                        fontWeight: FontWeight.bold),
+                    style: Styles.textStyle14
+                        .copyWith(fontWeight: FontWeight.bold),
                   ),
                 ),
               ),
               SimilarBooksListView()
             ],
-          ) ,)
-        ],)
-    );
+          ),
+        )
+      ],
+    ));
   }
 }
-
-

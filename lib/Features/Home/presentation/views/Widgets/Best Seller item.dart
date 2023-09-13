@@ -13,7 +13,10 @@ class BestSellerItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(onTap: (){Get.to(()=>BookDetailsviewbody());},
+    return GestureDetector(
+      onTap: () {
+        Get.to(() => BookDetailsviewbody());
+      },
       child: SizedBox(
         height: 125,
         child: Padding(
@@ -27,7 +30,8 @@ class BestSellerItem extends StatelessWidget {
                       color: Colors.red,
                       borderRadius: BorderRadius.circular(15),
                       image: const DecorationImage(
-                          image: AssetImage(AssestsData.test), fit: BoxFit.fill)),
+                          image: AssetImage(AssestsData.test),
+                          fit: BoxFit.fill)),
                 ),
               ),
               const SizedBox(
@@ -40,8 +44,7 @@ class BestSellerItem extends StatelessWidget {
                     SizedBox(
                       child: Text(
                         'Harry Poter and the Goblet of Fire',
-                        style:
-                            Styles.textStyle20,
+                        style: Styles.textStyle20,
                         maxLines: 2,
                         overflow: TextOverflow.ellipsis,
                       ),
@@ -58,8 +61,8 @@ class BestSellerItem extends StatelessWidget {
                       children: [
                         Text(
                           '19.99\$',
-                          style: Styles.textStyle20.copyWith(
-                              fontWeight: FontWeight.bold),
+                          style: Styles.textStyle20
+                              .copyWith(fontWeight: FontWeight.bold),
                         ),
                         Spacer(),
                         BookRating()
@@ -75,5 +78,3 @@ class BestSellerItem extends StatelessWidget {
     );
   }
 }
-
-
