@@ -9,7 +9,7 @@ class SearchViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return  Scaffold(
       body: Column(
         children: [
           SizedBox(
@@ -32,7 +32,7 @@ class SearchViewBody extends StatelessWidget {
               ),
               Text(
                 'Search Result',
-                style: Styles.textStyle16,
+                style: Styles.textStyle16.copyWith(fontWeight: FontWeight.bold),
                 textAlign: TextAlign.start,
               ),
             ],
